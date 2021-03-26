@@ -1,0 +1,29 @@
+import math
+import numpy as np
+
+
+def f(x):
+  return x*(np.log(x))- 1
+
+a = 2
+b = 3 
+contador = 0
+
+while np.fabs(b-a) > 0.0000001:
+  if contador > 23:
+    print("Os numeros de iteracoes foram excedido!")
+    break
+  z = (a+b) / 2
+  contador += 1
+  print('b = %.8f => f(b) = %+.8f' % (b, f(b)))     
+  print('iteracoes: ', contador)
+  
+  if f(a) * f(z) < 0:
+    w = z
+  elif f(z) * f(b) < 0:
+    a = z
+
+
+print('------------------------------------------')
+print('z = %.8f => f(z) = %+.8f' % (z, f(z)))
+print('iteracoes: ', contador)

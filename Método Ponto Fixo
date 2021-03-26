@@ -1,0 +1,35 @@
+import math
+import numpy as np
+
+def f(x):
+    return np.cos(x) - 3*x + 1
+
+def f2(x):
+    return (1 + np.cos(x))/3
+
+def PF():
+    etapa = 1
+
+    x0 = 1
+    t = 0.000001
+    Iteracoes = 10
+
+    while(1):
+        x1 = funcao2(x0)
+
+        print("Etapa: ", "%d" % etapa)
+        print("x0: ", "%.6f" % x0)
+        print("f(x0): ", "%.6f" % f((x0)))
+        print("x1: ", "%.6f" % x1)
+        print("-----------------")
+        x0 = x1
+        etapa += 1
+
+        if (etapa > Iteracoes):
+            print("Nao e convergente.")
+            break
+
+        if (np.fabs(f(x1)) <= t):
+            break
+
+    print("Raiz: ", "%.6f" %x1)

@@ -13,15 +13,15 @@ while np.fabs(w-y) > 0.0001:
   if contador > 50:
     print("Os numeros de iteracoes foram excedido!")
     break
-  z = (y+w) / 2
+  z = (a+b) / 2
   contador += 1
-  print('w = %.8f => f(w) = %+.8f' % (w, f(w)))
+  print('b = %.8f => f(b) = %+.8f' % (b, f(b)))     
   print('iteracoes: ', contador)
   
-  if f(y) * f(z) < 0:
+  if f(a) * f(z) < 0:
     w = z
-  elif f(z) * f(w) < 0:
-    y = z
+  elif f(z) * f(b) < 0:
+    a = z
 
 
 print('------------------------------------------')

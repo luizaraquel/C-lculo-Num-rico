@@ -1,0 +1,29 @@
+import math
+import numpy as np
+
+
+def f(x):
+  return (x**3)- x - 1
+
+a = 1
+b = 2
+contador = 0
+
+while np.fabs(w-y) > 0.0001:
+  if contador > 50:
+    print("Os numeros de iteracoes foram excedido!")
+    break
+  z = (y+w) / 2
+  contador += 1
+  print('w = %.8f => f(w) = %+.8f' % (w, f(w)))
+  print('iteracoes: ', contador)
+  
+  if f(y) * f(z) < 0:
+    w = z
+  elif f(z) * f(w) < 0:
+    y = z
+
+
+print('------------------------------------------')
+print('z = %.8f => f(z) = %+.8f' % (z, f(z)))
+print('iteracoes: ', contador)

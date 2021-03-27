@@ -27,3 +27,4 @@ while np.fabs(w-y) > 0.0001:
 print('------------------------------------------')
 print('z = %.8f => f(z) = %+.8f' % (z, f(z)))
 print('iteracoes: ', contador)
+ 

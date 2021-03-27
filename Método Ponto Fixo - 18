@@ -5,17 +5,17 @@ def f(x):
     return np.cos(x) - 3*x + 1
 
 def f2(x):
-    return (1 + np.cos(x))/3
+    return np.cos(x) - np.exp**(-x**(2)) + x
 
-def PF():
+def metodoPontoFixo():
     etapa = 1
 
-    x0 = 1
-    t = 0.000001
+    x0 = 1.5
+    t = 0.0001
     Iteracoes = 10
 
     while(1):
-        x1 = funcao2(x0)
+        x1 = f2(x0)
 
         print("Etapa: ", "%d" % etapa)
         print("x0: ", "%.6f" % x0)
@@ -33,3 +33,5 @@ def PF():
             break
 
     print("Raiz: ", "%.6f" %x1)
+   
+metodoPontoFixo()
